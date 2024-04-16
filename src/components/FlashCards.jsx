@@ -16,7 +16,7 @@ const FlashCards = () => {
 
     return(
         <>
-            <div className="uk-slider-container-offset" data-uk-slider>
+            <div className="uk-slider-container-offset" style={{margin: 'auto 0'}} data-uk-slider>
 
                 <div className="uk-position-relative uk-visible-toggle uk-light" data-tabindex="-1">
 

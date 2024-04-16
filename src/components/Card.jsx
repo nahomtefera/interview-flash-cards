@@ -13,7 +13,7 @@ const Card = ({interviewQuestion}) => {
                             <h3 className="uk-card-title">{interviewQuestion?.Type}</h3>
                             <p className='uk-text-normal' style={{maxWidth:'600px', margin:'3em auto'}}>{interviewQuestion?.Question}</p>
                             <button 
-                                className="uk-button uk-button-primary uk-text-bold" 
+                                className="uk-button uk-button-default uk-text-bold" 
                                 onClick={()=>{setShowAnswer(!showAnswer)}}
                             >
                                 Show Answer
@@ -22,10 +22,10 @@ const Card = ({interviewQuestion}) => {
                     )
                     : (
                         <>  
-                            <div data-uk-switcher="animation: uk-animation-fade; toggle: > *" style={{display:'flex', gap: '16px'}}>
-                                <button class="uk-button uk-button-primary" style={{padding: "0 8px"}} data-type="button">Star Summary</button>
-                                <button class="uk-button uk-button-primary" style={{padding: "0 8px"}} data-type="button">Full Answer</button>
-                                <button class="uk-button uk-button-primary" style={{padding: "0 8px"}} data-type="button">Visual Aid</button>
+                            <div data-uk-switcher="animation: uk-animation-fade; toggle: > *" style={{display:'flex', gap: '5px', justifyContent:'center'}}>
+                                <button class="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">STAR</button>
+                                <button class="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">FULL</button>
+                                <button class="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">VISUAL</button>
                             </div>
 
                             <ul class="uk-switcher uk-margin">
@@ -62,7 +62,7 @@ const Card = ({interviewQuestion}) => {
                             
 
                             <button 
-                                className="uk-button uk-button-primary uk-text-bold" 
+                                className="uk-button uk-button-default uk-text-bold" 
                                 style={{marginTop:'3em'}} 
                                 onClick={()=>{setShowAnswer(!showAnswer)}}
                             >   
