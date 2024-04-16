@@ -29,7 +29,7 @@ const FlashCards = () => {
                     <div className="uk-slider-items uk-child-width-1@s uk-grid">
                         {shuffledInterviewQuestions.map((interviewQuestion, idx) => {
                             return (
-                                <div  key={idx} style={{display:'flex', alignItems:'center'}}>
+                                <div  key={idx}>
                                     <Card interviewQuestion={interviewQuestion} />
                                 </div>
                             )
