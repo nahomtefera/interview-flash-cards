@@ -22,10 +22,10 @@ const Card = ({interviewQuestion}) => {
                     )
                     : (
                         <>  
-                            <div data-uk-switcher="animation: uk-animation-fade; toggle: > *">
-                                <button class="uk-button uk-button-primary" data-type="button">Star Summary</button>
-                                <button class="uk-button uk-button-primary" data-type="button">Full Answer</button>
-                                <button class="uk-button uk-button-primary" data-type="button">Visual Aid</button>
+                            <div data-uk-switcher="animation: uk-animation-fade; toggle: > *" style={{display:'flex', gap: '16px'}}>
+                                <button class="uk-button uk-button-primary" style={{padding: "0 8px"}} data-type="button">Star Summary</button>
+                                <button class="uk-button uk-button-primary" style={{padding: "0 8px"}} data-type="button">Full Answer</button>
+                                <button class="uk-button uk-button-primary" style={{padding: "0 8px"}} data-type="button">Visual Aid</button>
                             </div>
 
                             <ul class="uk-switcher uk-margin">
