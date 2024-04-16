@@ -8,7 +8,7 @@ const Card = ({interviewQuestion}) => {
             {
                 !showAnswer 
                     ? (
-                        <>
+                        <div>
                             <h3 className="uk-card-title">{interviewQuestion?.Type}</h3>
                             <p className='uk-text-normal' style={{maxWidth:'600px', margin:'3em auto'}}>{interviewQuestion?.Question}</p>
                             <button 
@@ -17,10 +17,10 @@ const Card = ({interviewQuestion}) => {
                             >
                                 Show Answer
                             </button>
-                        </>
+                        </div>
                     )
                     : (
-                        <>  
+                        <div>  
                             <div data-uk-switcher="animation: uk-animation-fade; toggle: > *" style={{display:'flex', gap: '5px', justifyContent:'center'}}>
                                 <button className="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">STAR</button>
                                 <button className="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">FULL</button>
@@ -67,7 +67,7 @@ const Card = ({interviewQuestion}) => {
                             >   
                                 Hide Answer
                             </button>
-                        </>
+                        </div>
                     )
             }
         </div>

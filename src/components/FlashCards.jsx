@@ -29,17 +29,17 @@ const FlashCards = () => {
                     <div className="uk-slider-items uk-child-width-1@s uk-grid">
                         {shuffledInterviewQuestions.map((interviewQuestion, idx) => {
                             return (
-                                <div  key={idx}>
+                                <div  key={idx} style={{display:'flex', alignItems:'center'}}>
                                     <Card interviewQuestion={interviewQuestion} />
                                 </div>
                             )
                         })}
                     </div>
 
-                    <a className="uk-position-center-left uk-position-small uk-hidden-hover" data-href data-uk-slidenav-previous data-uk-slider-item="previous"></a>
-                    <a className="uk-position-center-right uk-position-small uk-hidden-hover" data-href data-uk-slidenav-next data-uk-slider-item="next"></a>
 
                 </div>
+                <a className="uk-position-center-left uk-position-small uk-hidden-hover" data-href data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+                    <a className="uk-position-center-right uk-position-small uk-hidden-hover" data-href data-uk-slidenav-next data-uk-slider-item="next"></a>
 
                 <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
