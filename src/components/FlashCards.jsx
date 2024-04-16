@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "./Card";
 import interviewQuestions from "../utils/interview-questions";
 
@@ -11,8 +11,14 @@ const shuffleArray = array => {
     return array;
 };
 
+const shuffledInterviewQuestions = shuffleArray(interviewQuestions)
 
 const FlashCards = () => {
+
+    useEffect(() => {
+        console.log("shuffledInterviewQuestions: ", shuffledInterviewQuestions)
+    })
+    
 
     return(
         <>
@@ -21,17 +27,17 @@ const FlashCards = () => {
                 <div className="uk-position-relative uk-visible-toggle uk-light" data-tabindex="-1">
 
                     <div className="uk-slider-items uk-child-width-1@s uk-grid">
-                        {shuffleArray(interviewQuestions).map((interviewQuestion, idx) => {
+                        {shuffledInterviewQuestions.map((interviewQuestion, idx) => {
                             return (
-                                <div>
-                                    <Card key={idx} interviewQuestion={interviewQuestion} />
+                                <div  key={idx}>
+                                    <Card interviewQuestion={interviewQuestion} />
                                 </div>
                             )
                         })}
                     </div>
 
-                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" data-href data-uk-slidenav-previous data-uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" data-href data-uk-slidenav-next data-uk-slider-item="next"></a>
+                    <a className="uk-position-center-left uk-position-small uk-hidden-hover" data-href data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+                    <a className="uk-position-center-right uk-position-small uk-hidden-hover" data-href data-uk-slidenav-next data-uk-slider-item="next"></a>
 
                 </div>
 

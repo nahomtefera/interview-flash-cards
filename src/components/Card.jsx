@@ -3,7 +3,6 @@ import { useState } from 'react'
 const Card = ({interviewQuestion}) => {
     const [ showAnswer, setShowAnswer ] = useState(false)
 
-    console.log('interviewQuestion: ', interviewQuestion)
     return(
         <div className="uk-card uk-card-default uk-card-body uk-width-1@m " style={{minHeight: '300px'}}>
             {
@@ -23,32 +22,32 @@ const Card = ({interviewQuestion}) => {
                     : (
                         <>  
                             <div data-uk-switcher="animation: uk-animation-fade; toggle: > *" style={{display:'flex', gap: '5px', justifyContent:'center'}}>
-                                <button class="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">STAR</button>
-                                <button class="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">FULL</button>
-                                <button class="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">VISUAL</button>
+                                <button className="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">STAR</button>
+                                <button className="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">FULL</button>
+                                <button className="uk-button uk-button-default" style={{padding: "0 18px"}} data-type="button">VISUAL</button>
                             </div>
 
-                            <ul class="uk-switcher uk-margin">
+                            <ul className="uk-switcher uk-margin">
                                 <li>
                                     <div>
-                                        <h2 class="uk-card-title" style={{textAlign:'left'}}>{interviewQuestion.STAR_Summary.title}</h2>
+                                        <h2 className="uk-card-title" style={{textAlign:'left'}}>{interviewQuestion.STAR_Summary.title}</h2>
 
-                                        <h3 class="uk-card-title" style={{textAlign:'left'}}>Situation</h3>
+                                        <h3 className="uk-card-title" style={{textAlign:'left'}}>Situation</h3>
                                         <p style={{textAlign:'left'}}>{interviewQuestion.STAR_Summary.Situation}</p>
 
-                                        <h3 class="uk-card-title" style={{textAlign:'left'}}>Task</h3>
+                                        <h3 className="uk-card-title" style={{textAlign:'left'}}>Task</h3>
                                         <p style={{textAlign:'left'}}>{interviewQuestion.STAR_Summary.Task}</p>
 
-                                        <h3 class="uk-card-title" style={{textAlign:'left'}}>Action</h3>
-                                        <ul class="uk-list uk-list-bullet" style={{textAlign:'left'}}>
+                                        <h3 className="uk-card-title" style={{textAlign:'left'}}>Action</h3>
+                                        <ul className="uk-list uk-list-bullet" style={{textAlign:'left'}}>
                                             {
                                                 interviewQuestion.STAR_Summary.Action.map((action,idx) => {
-                                                    return <li key={idx-action}>{action}</li>
+                                                    return <li key={idx}>{action}</li>
                                                 })
                                             }
                                         </ul>
 
-                                        <h3 class="uk-card-title" style={{textAlign:'left'}}>Result</h3>
+                                        <h3 className="uk-card-title" style={{textAlign:'left'}}>Result</h3>
                                         <p style={{textAlign:'left'}}>{interviewQuestion.STAR_Summary.Result}</p>
                                     </div>
                                 </li>
