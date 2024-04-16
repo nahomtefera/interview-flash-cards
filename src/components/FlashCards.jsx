@@ -41,7 +41,7 @@ const FlashCards = () => {
                 <a className="uk-position-center-left uk-position-small uk-hidden-hover" data-href data-uk-slidenav-previous data-uk-slider-item="previous"></a>
                     <a className="uk-position-center-right uk-position-small uk-hidden-hover" data-href data-uk-slidenav-next data-uk-slider-item="next"></a>
 
-                <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin" style={{gap:'15px'}}></ul>
 
             </div>
         </>
