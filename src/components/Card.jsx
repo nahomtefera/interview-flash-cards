@@ -5,7 +5,7 @@ const Card = ({interviewQuestion}) => {
 
     console.log('interviewQuestion: ', interviewQuestion)
     return(
-        <div className="uk-card uk-card-default uk-card-body uk-width-1@m" style={{minHeight: '300px'}}>
+        <div className="uk-card uk-card-default uk-card-body uk-width-1@m " style={{minHeight: '300px'}}>
             {
                 !showAnswer 
                     ? (

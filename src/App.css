@@ -36,3 +36,70 @@
     transform: rotate(360deg);
   }
 }
+:root {
+  /* Light theme colors */
+  --background-color: #fff;
+  --text-color: #666;
+  --header-color: #f8f8f8;
+  --footer-color: #eee;
+  --card-background-color: #f0f0f0;
+  --card-text-color: #666;
+  --slider-bar-color: #ccc;
+  --slider-handle-color: #eee;
+  --link-color: #029acf;  /* Typical UIkit link color */
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors */
+  --background-color: #1a1a1a;
+  --text-color: #fafafa;
+  --header-color: #333;
+  --footer-color: #222;
+  --card-background-color: #2a2a2a;
+  --card-text-color: #ccc;
+  --slider-bar-color: #555;
+  --slider-handle-color: #666;
+  --link-color: #1e87f0;  /* A lighter blue for better visibility in dark mode */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.uk-card {
+  background-color: var(--card-background-color);
+  color: var(--card-text-color);
+}
+
+.uk-card-default {
+  background-color: var(--card-background-color);
+  color: var(--card-text-color);
+}
+
+.uk-card-default .uk-card-title, .uk-button-default {
+  color: var(--text-color);
+}
+
+
+
+/* .uk-slider {
+  background-color: var(--slider-bar-color);
+} */
+
+.uk-slider-handle {
+  background-color: var(--slider-handle-color);
+}
+/* 
+h2, h3, h4, h1, .uk-h2, .uk-card-title{
+  color: var(--text-color); 
+} */
+
+.uk-link {
+  color: var(--link-color);
+}
+
+/* Specific styles for slider navigation buttons */
+.uk-slider-items .uk-active .uk-slider-nav span {
+  background-color: var(--link-color);
+}
